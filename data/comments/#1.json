@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "user": "lucianape3",
+        "text": "This is a great post!",
+        "replies": [
+            {
+                "id": 2,
+                "user": "test2323",
+                "text": "I totally agree!"
+            },
+            {
+                "id": 3,
+                "user": "gratitude",
+                "text": "I disagree, this post is terrible."
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "user": "gratitude",
+        "text": "I haven't decided yet, but I'm looking forward to it!",
+        "replies": [
+            {
+                "id": 6,
+                "user": "lucianape3",
+                "text": "Du-te ma!"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "user": "lucianape3",
+        "text": "Am inteles.",
+        "replies": []
+    },
+    {
+        "id": 7,
+        "user": "lucianape3",
+        "text": "Cleaning is an important part of living right.",
+        "replies": []
+    }
+]
