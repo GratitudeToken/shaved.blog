@@ -19,7 +19,7 @@ global.admins = ["lucianape3", "fatzuca", "barbuvlad21", "maki1", "abubfc", "dag
 // configuration for multer
 let storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, './shield/uploads/')
+    cb(null, './static/uploads/')
   },
   filename: function (req, file, cb) {
     let extArray = file.mimetype.split("/")
@@ -37,7 +37,7 @@ const app = express()
 // express.json to decifer json data from incoming requests
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(express.static(path.join(__dirname, 'shield')))
+app.use(express.static(path.join(__dirname, 'static')))
 
 
 // const rpc = new JsonRpc(endpoint + v2Point, { fetch })
@@ -279,7 +279,7 @@ app.put('/delete', (req, res) => {
     const filteredVotes = votes.filter(vote => vote.id !== parseInt(req.body.id))
 
     // delete the image
-    imageToDelete[0].image !== '' ? fs.unlinkSync('shield/uploads/' + imageToDelete[0].image) : null
+    imageToDelete[0].image !== '' ? fs.unlinkSync('static/uploads/' + imageToDelete[0].image) : null
 
     // delete the comments file
     fs.unlinkSync('./data/comments/#' + req.body.id + '.json')

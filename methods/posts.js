@@ -176,7 +176,7 @@ module.exports.userInfo = async function (user, authenticating) {
       const avatarPromise = new Promise((resolve, reject) => {
         sharp(imgBuffer)
           .resize(320)
-          .toFile(`./shield/avatars/${user}.webp`, (err, info) => {
+          .toFile(`./static/avatars/${user}.webp`, (err, info) => {
             if (err) {
               reject(err)
               console.log('Error saving avatar: ' + err)
